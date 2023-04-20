@@ -1,16 +1,20 @@
 /* ----------- basic properties ---------------- */
 :root {
+  /* fon color */
   --primary-background-colour: #ffffff;
   --secondary-background-colour: #2e2f42;
   --section-background-colour: #f4f4fd;
 
+  /* text color */
   --secondery-text-colour: #2e2f42;
-
   --white-text-colour: #ffffff;
   --footer-text-colour: #f4f4fd;
 
+  /* button color */
   --button-colour: #4d5ae5;
   --accent-colour: #404bbf;
+
+  --border-color: #e7e9fc;
 }
 
 body {
@@ -18,9 +22,32 @@ body {
   background-color: var(--primary-background-colour);
   color: #434455;
 }
+
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+
+  /* outline: 2px solid coral; */
+}
+
 /* ----------- components --------- */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+.section {
+  padding: 120px 0;
 }
 
 .button {
@@ -37,6 +64,8 @@ body {
   text-align: center;
 
   color: var(--secondery-text-colour);
+
+  margin-bottom: 72px;
 }
 .worker {
   background-color: var(--primary-background-colour);
@@ -51,6 +80,14 @@ body {
 
   color: var(--secondery-text-colour);
 }
+
+.work-item:not(:last-child),
+.adv-list-item:not(:last-child),
+.worker:not(:last-child),
+.filter-item:not(:last-child) {
+  margin-right: 24px;
+}
+
 .post,
 .category-working {
   font-size: 16px;
@@ -58,7 +95,26 @@ body {
   letter-spacing: 0.02em;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1158px;
+  padding: 0 15px;
+}
+
+.wrapper {
+  width: 1440px;
+}
+
+.transform {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
 /* ----------- header ------------ */
+.header-box > .container {
+  padding: 24px 0;
+}
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -111,9 +167,19 @@ body {
   color: var(--accent-colour);
 }
 
+/* frame */
+.header-box {
+  border-bottom: solid 1px var(--border-color);
+}
 /* ---------- hero -------------- */
+
 .hero {
   background-color: var(--secondary-background-colour);
+
+  padding: 188px 472px;
+}
+.hero-box {
+  text-align: center;
 }
 
 .hero-title {
@@ -121,10 +187,10 @@ body {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
 
   color: var(--white-text-colour);
 }
+
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--accent-colour);
@@ -138,6 +204,9 @@ body {
 
   color: var(--white-text-colour);
   background-color: var(--button-colour);
+
+  padding: 16px 32px;
+  margin-top: 64px;
 }
 /* ---------- advantages-------- */
 .adv-title {
@@ -147,23 +216,55 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--secondery-text-colour);
+
+  margin-bottom: 8px;
 }
 .adv-description {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+.adv > .list {
+  display: flex;
+}
+
+.adv-list-item {
+  flex-wrap: wrap;
+}
+
+/* ----------- work -------------- */
+
 /* ---------- our team ----------- */
 .team {
   background-color: var(--section-background-colour);
+}
+
+.worker-box {
+  text-align: center;
+  padding: 32px 16px;
+}
+.worker-name {
+  margin-bottom: 8px;
 }
 
 /* --------- footer --------- */
 .footer {
   background-color: var(--secondary-background-colour);
 }
+.footer-box {
+  padding-top: 100px;
+  padding-right: 1020px;
+  padding-bottom: 100px;
+  padding-left: 156px;
+}
+
 .logo-footer {
   color: var(--footer-text-colour);
+}
+.footer-box > .logo {
+  display: block;
+  margin-bottom: 16px;
 }
 .footer-desc {
   font-size: 16px;
@@ -171,6 +272,19 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--footer-text-colour);
+}
+.header-box .logo {
+  margin-right: 76px;
+}
+.menu-link:not(:last-child) {
+  margin-right: 40px;
+}
+/* adress */
+.adress {
+  margin-left: auto;
+}
+.adress-link:nth-child(1) {
+  margin-right: 40px;
 }
 
 /* =========== PORTFOLIO ============= */
@@ -192,7 +306,43 @@ body {
   color: var(--white-text-colour);
   background-color: var(--accent-colour);
 }
+.filter-button {
+  padding: 12px 24px;
+}
+.filter-box {
+  display: flex;
+  padding: 96px 0 72px 0;
+
+  justify-content: center;
+}
+.filter-box > .list {
+  display: flex;
+}
+
 /* ----------- application ------------ */
+
 .category-working {
   color: #434455;
+}
+
+.card-box {
+  flex-basis: calc(100% / 3);
+}
+.app-cards:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+.app-cards:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 48px;
+}
+.app-cards {
+  width: 360px;
+}
+.card-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding: 0 -1px;
+}
+.name-working {
+  margin-bottom: 8px;
 }
