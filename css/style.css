@@ -108,6 +108,16 @@ img {
 }
 
 /* ----------- header ------------ */
+.header-box {
+  padding: 24px 0;
+}
+
+.header .logo {
+  margin-right: 76px;
+}
+.menu-link:not(:last-child) {
+  margin-right: 40px;
+}
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -169,8 +179,7 @@ img {
 }
 
 /* frame */
-.header-box {
-  padding: 24px 0;
+.header {
   border-bottom: solid 1px var(--border-color);
 }
 /* ---------- hero -------------- */
@@ -274,7 +283,7 @@ img {
 /* --------- footer --------- */
 .footer {
   background-color: var(--secondary-background-colour);
-  padding: 100px 0;
+
   padding-left: 15px;
 }
 
@@ -285,6 +294,10 @@ img {
   display: inline-block;
   margin-bottom: 16px;
 }
+
+.footer-box {
+  padding: 100px 0;
+}
 .footer-desc {
   font-size: 16px;
   line-height: 1.5;
@@ -292,12 +305,6 @@ img {
 
   color: var(--footer-text-colour);
   max-width: 264px;
-}
-.header-box .logo {
-  margin-right: 76px;
-}
-.menu-link:not(:last-child) {
-  margin-right: 40px;
 }
 
 /* =========== PORTFOLIO ============= */
