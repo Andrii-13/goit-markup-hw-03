@@ -338,7 +338,7 @@ img {
   padding: 12px 24px;
 }
 
-.filter-box > .list {
+.filter-list {
   display: flex;
   justify-content: center;
   margin-bottom: 72px;
