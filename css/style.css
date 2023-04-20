@@ -110,8 +110,8 @@ img {
 .header-box {
   padding: 0 15px;
 }
-nav.transform,
-.adress {
+.adress-item,
+.menu-item {
   padding: 24px 0;
 }
 .header .logo {
@@ -167,6 +167,7 @@ nav.transform,
   font-style: normal;
 }
 .adress-item {
+  display: inline-block;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -288,14 +289,15 @@ nav.transform,
 
   padding-left: 15px;
 }
-
+.footer .logo {
+  padding-top: 100px;
+}
 .logo-footer {
   color: var(--footer-text-colour);
 }
 .footer-box > .logo {
   display: inline-block;
   margin-bottom: 16px;
-  padding-top: 100px;
 }
 
 .footer-desc {
