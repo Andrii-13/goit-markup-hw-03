@@ -125,9 +125,7 @@ img {
 .link {
   text-decoration: none;
 }
-.link-header {
-  padding: 24px 0;
-}
+
 .logo-header {
   color: var(--secondery-text-colour);
 }
@@ -172,6 +170,7 @@ img {
 
 /* frame */
 .header-box {
+  padding: 24px 0;
   border-bottom: solid 1px var(--border-color);
 }
 /* ---------- hero -------------- */
@@ -247,8 +246,8 @@ img {
 }
 
 /* ----------- work -------------- */
-.work {
-  margin-top: -120px;
+.work-section {
+  padding: 0 0 120px 0;
 }
 /* ---------- our team ----------- */
 .team {
@@ -275,16 +274,15 @@ img {
 /* --------- footer --------- */
 .footer {
   background-color: var(--secondary-background-colour);
-}
-.footer-box {
   padding: 100px 0;
   padding-left: 15px;
 }
+
 .logo-footer {
   color: var(--footer-text-colour);
 }
 .footer-box > .logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
 }
 .footer-desc {
@@ -301,11 +299,12 @@ img {
 .menu-link:not(:last-child) {
   margin-right: 40px;
 }
-.link-footer {
-  display: inline-block;
-}
 
 /* =========== PORTFOLIO ============= */
+.section-app {
+  padding-bottom: 120px;
+  padding-top: 96px;
+}
 
 /* ---------- filter -------------- */
 .filter-button {
@@ -331,10 +330,8 @@ img {
 }
 .filter-box {
   display: flex;
-  padding: 96px 0 72px 0;
-  margin-top: -120px;
-
   justify-content: center;
+  margin-bottom: 72px;
 }
 .filter-box > .list {
   display: flex;
