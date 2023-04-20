@@ -328,13 +328,11 @@ img {
 .filter-button {
   padding: 12px 24px;
 }
-.filter-box {
+
+.filter-box > .list {
   display: flex;
   justify-content: center;
   margin-bottom: 72px;
-}
-.filter-box > .list {
-  display: flex;
 }
 
 /* ----------- application ------------ */
