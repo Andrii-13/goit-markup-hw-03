@@ -24,12 +24,9 @@ body {
 }
 
 *,
-*::after,
-::before {
-  box-sizing: border-box;
 
   /* outline: 2px solid coral; */
-}
+
 
 /* ----------- components --------- */
 h1,
@@ -52,6 +49,7 @@ img {
 
 .button {
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .work-title,
@@ -66,9 +64,6 @@ img {
   color: var(--secondery-text-colour);
 
   margin-bottom: 72px;
-}
-.worker {
-  background-color: var(--primary-background-colour);
 }
 
 .worker-name,
@@ -107,14 +102,12 @@ img {
 
 .transform {
   display: flex;
-
   flex-wrap: wrap;
+
+  align-items: center;
 }
 
 /* ----------- header ------------ */
-.header-box > .container {
-  padding: 24px 0;
-}
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -132,6 +125,9 @@ img {
 .link {
   text-decoration: none;
 }
+.link-header {
+  padding: 24px 0;
+}
 .logo-header {
   color: var(--secondery-text-colour);
 }
@@ -148,6 +144,13 @@ img {
 .menu-item:hover,
 .menu-item:focus {
   color: var(--accent-colour);
+}
+/* adress */
+.adress {
+  margin-left: auto;
+}
+.adress-link:nth-child(1) {
+  margin-right: 40px;
 }
 
 .adress {
@@ -176,7 +179,7 @@ img {
 .hero {
   background-color: var(--secondary-background-colour);
 
-  padding: 188px 472px;
+  padding: 188px 0;
 }
 .hero-box {
   text-align: center;
@@ -189,6 +192,9 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--white-text-colour);
+
+  max-width: 496px;
+  margin: 0 auto;
 }
 
 .hero-button:hover,
@@ -205,8 +211,15 @@ img {
   color: var(--white-text-colour);
   background-color: var(--button-colour);
 
+  display: block;
+  margin: 0 auto;
+  margin-top: 48px;
   padding: 16px 32px;
-  margin-top: 64px;
+
+  min-width: 169px;
+  height: 56px;
+
+  border: none;
 }
 /* ---------- advantages-------- */
 .adv-title {
@@ -230,20 +243,31 @@ img {
 }
 
 .adv-list-item {
-  flex-wrap: wrap;
+  flex-basis: calc((100% - 3 * 24px));
 }
 
 /* ----------- work -------------- */
-
+.work {
+  margin-top: -120px;
+}
 /* ---------- our team ----------- */
 .team {
   background-color: var(--section-background-colour);
+}
+.list-worker {
+  display: flex;
 }
 
 .worker-box {
   text-align: center;
   padding: 32px 16px;
 }
+.worker {
+  background-color: var(--primary-background-colour);
+
+  border-radius: 0 0 4px 4px;
+}
+
 .worker-name {
   margin-bottom: 8px;
 }
@@ -253,12 +277,9 @@ img {
   background-color: var(--secondary-background-colour);
 }
 .footer-box {
-  padding-top: 100px;
-  padding-right: 1020px;
-  padding-bottom: 100px;
-  padding-left: 156px;
+  padding: 100px 0;
+  padding-left: 15px;
 }
-
 .logo-footer {
   color: var(--footer-text-colour);
 }
@@ -272,6 +293,7 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--footer-text-colour);
+  max-width: 264px;
 }
 .header-box .logo {
   margin-right: 76px;
@@ -279,12 +301,8 @@ img {
 .menu-link:not(:last-child) {
   margin-right: 40px;
 }
-/* adress */
-.adress {
-  margin-left: auto;
-}
-.adress-link:nth-child(1) {
-  margin-right: 40px;
+.link-footer {
+  display: inline-block;
 }
 
 /* =========== PORTFOLIO ============= */
@@ -300,6 +318,8 @@ img {
 
   color: var(--button-colour);
   background-color: var(--section-background-colour);
+
+  border: solid var(--border-color);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -312,6 +332,7 @@ img {
 .filter-box {
   display: flex;
   padding: 96px 0 72px 0;
+  margin-top: -120px;
 
   justify-content: center;
 }
